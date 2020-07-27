@@ -11,15 +11,16 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+  
     width: 100%;
 }
 
 section div#pre{
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: #fff;
-    width: 500px;
+
     padding: 20px 10px;
     border-radius: 4px;
     box-shadow: 1px 1px 5px 1px black;
@@ -28,9 +29,6 @@ section div#pre{
     animation-duration: 2.5s;
     transform: skew(20deg, 50deg);
 
-
-
- 
 }
 
 input#btn{
@@ -90,18 +88,49 @@ section div#res input#btn2:hover{
 @media(max-width:700px){
     section{
         flex-direction: column;
+        margin-bottom: 5px;
     }
     section div#pre{
         margin-bottom: 20px;
-        width: 500px;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+     
 
-        justify-content: center;
     }
+
     section div#res{
-        width: 500px;
-  
+        width: 350px;
+        align-items: center;
         justify-content: center;
+
         
+    }
+    section div#pre input#txtname{
+        margin-bottom: 5px;
+       margin-right: 100px;
+    
+    }
+    section div#pre input#txtsobre{
+        margin-right: 100px;
+        margin-bottom: 5px;
+    }
+    section div#pre input#txtsenha{
+        margin-right: 100px;
+        margin-bottom: 5px;
+    }
+    section div#pre input#confirmS{
+        margin-right: 100px;
+        margin-bottom: 5px;
+    }
+    section div#pre input#txtemail{
+        margin-right: 100px;
+        margin-bottom: 5px;
+    }
+    section div#pre input#confirmE{
+        margin-right: 100px;
+        margin-bottom: 5px;
     }
 }
 
