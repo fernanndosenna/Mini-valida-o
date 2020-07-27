@@ -16,41 +16,44 @@ window.document.getElementById("btn").addEventListener("click",() =>{
     var msg = window.document.getElementById("msg")
     var res = window.document.getElementById("res")
     var sexo = window.document.getElementsByName("radsex")
-   
+
  if(nome.value.length==0 || sobrenome.value.length==0 || senha.value.length==0 || email.value.length==0 || confirmS.value.length==0 || confirmE.value.length==0){
     window.alert("Ainda há caixas vazias a serem preenchidas!") 
-   
+     
     if(nome.value.length==0){
         nome.style.border="2px solid red"
-    }if(sobrenome.value.length==0){
-        sobrenome.style.border="2px solid red"
-    }if(senha.value.length==0){
+        if(sobrenome.value.length==0){
+            sobrenome.style.border="2px solid red"
+            if(senha.value.length==0){
+                senha.style.border="2px solid red"
+                if(email.value.length==0){
+                    email.style.border="2px solid red"
+                    if(confirmS.value.length==0){
+                        confirmS.style.border="2px solid red"
+                        if(confirmE.value.length==0){
+                            confirmE.style.border="2px solid red"
+                            if(msg.value.length==0){
+                                msg.style.border="2px solid red"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } //parei aqui branch v2
+}else{
+    if(senha.value != confirmS.value  ){
+        window.alert("[ERRO] verifique a confirmação de sua senha!")
         senha.style.border="2px solid red"
-    }if(email.value.length==0){
+        confirmS.style.border="2px solid red" 
+       
+       
+    }else if(email.value != confirmE.value){
+        window.alert("[ERRO] verifique a confirmação de seu email")
         email.style.border="2px solid red"
-    }if(confirmS.value.length==0){
-        confirmS.style.border="2px solid red"
-    }if(confirmE.value.length==0){
         confirmE.style.border="2px solid red"
-    }if(msg.value.length==0){
-        msg.style.border="2px solid red"
-    }
-  
-} if(senha.value != confirmS.value){
-    window.alert("As senhas não correspondem!")
-    senha.style.border="2px solid red"
-    confirmS.style.border="2px solid red" 
-    
-   
-  
-}else if(email.value != confirmE.value){
-    window.alert("Email não correspondente")
-    email.style.border="2px solid red"
-    confirmE.style.border="2px solid red"     
-} /*parei aqui*/
-
-
-else{
+    }else{
+       window.alert("Dados enviados")
     var genero=""
     if(sexo[0].checked){
          genero = "Masculino"
@@ -67,13 +70,13 @@ else{
     msg.value=""
     confirmE.value=""
     confirmS.value=""
-    window.alert("Dados enviados")
+
 
 
     res.style.transition="ease-in 2s"
     res.style.opacity="1"    
 
-  
+}
 }
 
 
@@ -117,5 +120,4 @@ elemento.innerHTML += letra,75 *i)
 const titulo = document.querySelector("h1"); /*o h1 se transforma no parametro elemento*/
 typeWrite(titulo)
 typeWrite(document.querySelector("p#1"))
-
 
